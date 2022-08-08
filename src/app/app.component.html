@@ -6,7 +6,7 @@ Right ? <input type="checkbox" [(ngModel)]="isRight" />
 <b>{{childData2}} <button (click)="ChangeCheck()">Change Child2 Check</button></b>
 <hr>
 <h1>Child</h1>
-<app-child [parentData]="Test" (sendData)="FromChild($event)"></app-child>
+<app-child [parentData]="childData" (sendData)="FromChild($event)"></app-child>
 <hr>
 <h1>Child2</h1>
 <app-child2 [parentData]="Test2" (pushDataToParent)="FromChild2($event)">Test</app-child2>
