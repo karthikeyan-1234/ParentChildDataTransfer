@@ -8,9 +8,11 @@ import { Person } from '../person';
 })
 export class ChildComponent implements OnInit {
 
-  @Input() parentData: any;
-  @Output() sendData = new EventEmitter<Person>();
   person1: Person = new Person();
+  @Input() 
+    set parentData(value: Person){this.person1= {...value}};
+    get parentData():Person{return this.person1};
+  @Output() sendData = new EventEmitter<Person>();
 
   constructor() { }
 
